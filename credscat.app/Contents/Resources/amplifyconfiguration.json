@@ -1,0 +1,30 @@
+{
+    "auth": {
+        "plugins": {
+            "awsCognitoAuthPlugin": {
+                "IdentityManager": {
+                    "Default": {}
+                },
+                "CognitoUserPool": {
+                    "Default": {
+                        "PoolId": "eu-west-1_HpsmInuLm",
+                        "AppClientId": "2b6oa04ija87ffqhovtgkft7u6",
+                        "Region": "eu-west-1"
+                    }
+                },
+                "Auth": {
+                    "Default": {
+                        "authenticationFlowType": "USER_SRP_AUTH",
+                        "OAuth": {
+                            "WebDomain": "https://inqdo-access-controller.auth.eu-west-1.amazoncognito.com/login?client_id=2b6oa04ija87ffqhovtgkft7u6&response_type=code&scope=email+openid+profile&redirect_uri=myapp://auth/callback",
+                            "AppClientId": "2b6oa04ija87ffqhovtgkft7u6",
+                            "SignInRedirectURI": "myapp://auth/callback",
+                            "SignOutRedirectURI": "myapp://auth/callback",
+                            "Scopes": ["email", "profile", "openid"]
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
